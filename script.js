@@ -27,7 +27,10 @@ function getComputerChoice(){
 	
 }
  
-const playerSelection = prompt("Enter your choice", "rock");
+const playerInput = prompt("Enter your choice", "Rock");
+let playerSelection = playerInput.toLowerCase();
+
+
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
 
