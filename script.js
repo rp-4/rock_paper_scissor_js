@@ -1,3 +1,5 @@
+//document.getElementById("resBot").innerHTML = "Bot: 1";
+
 
 function playRound() {
 	const playerInput = prompt("Enter your choice", "Rock");
@@ -49,10 +51,17 @@ for (let i = 0; i < 5; i++) {
 	}
 }
 if (playerSum > compSum){
+	document.getElementById("resBot").innerHTML = "Bot: 0";
+	document.getElementById("resPlayer").innerHTML = "Player: 1";
 	return "Player Won the game !!";
 }else if (playerSum < compSum){
+	document.getElementById("resBot").innerHTML = "Bot: 1";
+	document.getElementById("resPlayer").innerHTML = "Player: 0";
 	return "Computer Won the game !!";
 }else if (playerSum === compSum){
+	document.getElementById("resBot").innerHTML = "Oh Fuck, It's a tie !!";
+	document.getElementById("resPlayer").innerHTML = "";
+	document.getElementById("vs").innerHTML = "";
 	return "Oh Fu*k, It's a tie !!";
 }
 
