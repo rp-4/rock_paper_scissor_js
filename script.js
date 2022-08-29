@@ -1,6 +1,3 @@
-//document.getElementById("resBot").innerHTML = "Bot: 1";
-
-
 function playRound() {
 	const playerInput = prompt("Enter your choice", "Rock");
 	let playerSelection = playerInput.toLowerCase();
@@ -32,44 +29,51 @@ function playRound() {
 
 
 function getComputerChoice(){
-const cars = ["rock", "paper", "scissor"];
-randNumb = Math.floor(Math.random()*3);
-return cars[randNumb];
+	const cars = ["rock", "paper", "scissor"];
+	randNumb = Math.floor(Math.random()*3);
+	return cars[randNumb];
 
 }
 
 function game(){
-let playerSum = 0;
-let compSum = 0;
-for (let i = 0; i < 5; i++) {
-	console.log(i);
-	let result = playRound();
-	if (result === "player"){
-		playerSum = playerSum + 1;
-	}else if (result === "comp"){
-		compSum = compSum + 1;
+	let playerSum = 0;
+	let compSum = 0;
+	for (let i = 0; i < 5; i++) {
+		console.log(i);
+		let result = playRound();
+		if (result === "player"){
+			playerSum = playerSum + 1;
+			document.getElementById("SubResPlayer").innerHTML = "Player: "+playerSum;
+		}else if (result === "comp"){
+			compSum = compSum + 1;
+			document.getElementById("subResBot").innerHTML = "Bot: "+compSum;
+		}
+	}
+	
+	if (playerSum > compSum){
+		document.getElementById("resBot").innerHTML = "Bot: 0 v/s ";
+		document.getElementById("resPlayer").innerHTML = "Player: 1";
+		return "Player Won the game !!";
+	}else if (playerSum < compSum){
+		document.getElementById("resBot").innerHTML = "Bot: 1 v/s ";
+		document.getElementById("resPlayer").innerHTML = "Player: 0";
+		return "Computer Won the game !!";
+	}else if (playerSum === compSum){
+		document.getElementById("resBot").innerHTML = "Oh Fuck, It's a tie !!";
+		document.getElementById("resPlayer").innerHTML = "";
+		document.getElementById("vs").innerHTML = "";
+		return "Oh Fu*k, It's a tie !!";
 	}
 }
-if (playerSum > compSum){
-	document.getElementById("resBot").innerHTML = "Bot: 0";
-	document.getElementById("resPlayer").innerHTML = "Player: 1";
-	return "Player Won the game !!";
-}else if (playerSum < compSum){
-	document.getElementById("resBot").innerHTML = "Bot: 1";
-	document.getElementById("resPlayer").innerHTML = "Player: 0";
-	return "Computer Won the game !!";
-}else if (playerSum === compSum){
-	document.getElementById("resBot").innerHTML = "Oh Fuck, It's a tie !!";
-	document.getElementById("resPlayer").innerHTML = "";
-	document.getElementById("vs").innerHTML = "";
-	return "Oh Fu*k, It's a tie !!";
-}
 
-}
+//document.getElementById("vs").innerHTML = " v/s ";
+let button = document.getElementById("play")
+button.addEventListener("click", game);
 
-
+////////////
+//document.getElementById("resBot").innerHTML = "Bot: 1";
 
 //console.log(playRound(playerSelection, computerSelection));
-console.log(game());
+
 //console.log(getComputerChoice());
 
