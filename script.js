@@ -1,3 +1,5 @@
+/*
+
 function playRound() {
 	const playerInput = prompt("Enter your choice", "Rock");
 	let playerSelection = playerInput.toLowerCase();
@@ -70,6 +72,7 @@ function game(){
 let button = document.getElementById("play")
 button.addEventListener("click", game);
 
+*/
 ////////////
 //document.getElementById("resBot").innerHTML = "Bot: 1";
 

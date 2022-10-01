@@ -4,17 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
 <body>
  
-<section clss="topSection">
-    <p class="title">Welcome to the game of three: Rock, Paper and Scissor....</p>
+<section class="topSection">
+    <p>Welcome to the game of three: Rock, Paper and Scissor....</p>
 </section>
-<section clss="result">
+
+<section class="mainSection">
+    <section class="indiSection">
+        <div id="box1">You</div>
+        <div id="box">R</div>
+        <div id="box">P</div>
+        <div id="box">S</div>
+
+    </section>
+
+
+    <section class="indiSection midSection">
+        <div id="middleBox1">Select the element to play</div>
+        <div id="middleBox2">
+            <div id="result"></div>
+            <div id="result"></div>
+        </div>
+        <div class="indiSection" id="middleBox3"></div>
+        <div class="indiSection" id="middleBox4">
+            <div class="indiSection" id="middleButton">Play</div>
+            <div class="indiSection" id="middleButton">Reset</div>
+        </div>
+    </section>
+    <section class="indiSection">
+        <div class="indiSection" id="box1">Bot</div>
+        <div class="indiSection" id="box">R</div>
+        <div class="indiSection" id="box">P</div>
+        <div class="indiSection" id="box">S</div>
+    </section>
     
 </section>
 
+<!--
 <div class="result">
 <h3><span id="subResBot">Bot: 0</span><span id="vs1"> vs </span><span id="SubResPlayer">Player: 0</span></h3>
 </div>
@@ -26,7 +56,7 @@
 <div class="btn">
 <input type="button" id="play" value="Play Me!!">
 </div>
-
+-->
 
 <script src="script.js"></script>
   
