@@ -68,7 +68,7 @@ p{
     height: 80px;
 
     color: #0fb4d1;
-    font-size: 30px;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,7 +79,7 @@ p{
     width: 80px;
     height: 50px;
     color: #19cf0f;
-    font-size: 30px;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,10 +113,27 @@ p{
 #result{
     width: 155px;
     height: 145px;
+
     border-radius: 10px;
     border: #d9dc10 2px ;
     border-style: solid;
+    color: #ffecec;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+#winLoss{
+    border-style: none;
+    color: #fff900;
+}
+
+#score{
+    border-style: none;
+    color: #19d10f;
+}
+
 #middleBox3{
     width: 340px;
     height: 50px;
