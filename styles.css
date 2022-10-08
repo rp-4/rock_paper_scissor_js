@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
     background-color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 
 }
@@ -20,6 +20,14 @@ div{
     text-align: center;
 }
 
+button{
+    border-radius: 10px;
+    border: #c3083f 2px ;
+    border-style: solid;
+    font-size: 30px;
+    text-align: center;
+}
+
 .topSection{
     width: 100%;
     height: 40px;
@@ -27,7 +35,7 @@ div{
     text-align: center;
     padding-bottom: 0;
     font-size: 30px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     margin-top: 20px;
     
 }
@@ -63,7 +71,7 @@ p{
        
 }
 
-#box{
+#rock, #paper, #scissor{
     width: 80px;
     height: 80px;
 
@@ -73,8 +81,40 @@ p{
     justify-content: center;
     align-items: center;
 
+    cursor: pointer;
+
+    background-color: #79acb53e;
+
+    box-shadow: 0 0px rgba(228, 240, 64, 0.851);
+
 
 }
+
+#rock:hover, #paper:hover, #scissor:hover {
+    background-color: #0fb4d1;
+    color: #1d2a2c;
+}
+
+#rock:active, #paper:active, #scissor:active {
+  /* background-color: #dce0686d; */
+  /* box-shadow: 0 1px rgb(187, 255, 0); */
+  /* color: #df0c21; */
+  transform: translateY(1px);
+}
+
+
+#BotRock, #BotPaper, #BotScissor{
+    width: 80px;
+    height: 80px;
+
+    color: #0fb4d1;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 #box1{
     width: 80px;
     height: 50px;
@@ -124,12 +164,13 @@ p{
     justify-content: space-between;
 }
 
-#winLoss{
+#YouWinLoss, #BotWinLoss{
     border-style: none;
     color: #fff900;
+    font-size: 50px;
 }
 
-#score{
+#YouScore, #BotScore{
     border-style: none;
     color: #19d10f;
 }
@@ -137,6 +178,10 @@ p{
 #middleBox3{
     width: 340px;
     height: 50px;
+
+    color: #fff900;
+    font-size: 20px;
+    justify-content: center;
 
 
 }
@@ -146,9 +191,26 @@ p{
     border-style: none;
 }
 
-#middleButton{
+#play, #reset{
     width: 155px;
     height: 50px;
     justify-content: center;
+    background-color: #79acb53e;
+
+    cursor: pointer;
+
+    
 
 }
+#play:Hover, #reset:Hover{
+
+    background-color: #55c94e;
+    color: #1d2a2c;
+}
+
+#play:active, #reset:active {
+    /* background-color: #dce0686d; */
+    /* box-shadow: 0 1px rgb(187, 255, 0); */
+    /* color: #df0c21; */
+    transform: translateY(1px);
+  }
